@@ -2,6 +2,7 @@ package me.ibrahimsn.livepreferences
 
 import android.os.Bundle
 import android.preference.PreferenceManager
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import me.ibrahimsn.library.LiveSharedPreferences
@@ -18,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         liveSharedPreferences
             .getString("exampleString", "default")
             .observe(this, Observer {
-                //Log.d("###", it)
+                Log.d("###", it)
             })
 
         liveSharedPreferences
